@@ -1,0 +1,19 @@
+import {useState} from "react";
+
+const Cooperation = ({deposit,withdraw}) => {
+    const [sum, setSum] = useState(1);
+
+    return (
+        <div>
+            <button onClick={() => withdraw(sum)}>Withdraw</button>
+            <input
+                type={"number"}
+                onChange={e => setSum(+e.target.value)}
+                value={sum}
+            />
+            <button onClick={()=> deposit(sum)}>Deposit</button>
+        </div>
+    );
+};
+
+export default Cooperation;
