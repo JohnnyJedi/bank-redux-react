@@ -1,17 +1,20 @@
 import {useState} from "react";
+import {store} from "../configureStore/store.js";
+import {deposit, withdraw} from "../actions/accountActions.js";
 
-const Cooperation = ({deposit,withdraw}) => {
+const Cooperation = () => {
     const [sum, setSum] = useState(1);
 
     return (
         <div>
-            <button onClick={() => withdraw(sum)}>Withdraw</button>
+            <button onClick={() => store.dispatch(withdraw(sum))}>Withdraw</button>
             <input
+                style={{appearance:'none'}}
                 type={"number"}
                 onChange={e => setSum(+e.target.value)}
                 value={sum}
             />
-            <button onClick={()=> deposit(sum)}>Deposit</button>
+            <button onClick={()=> store.dispatch(deposit(sum))}>Deposit</button>
         </div>
     );
 };
