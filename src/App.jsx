@@ -1,14 +1,14 @@
 import './App.css'
 import Balance from "./components/Balance.jsx";
-import Cooperation from "./components/Cooperation.jsx";
+import Operation from "./components/Operation.jsx";
 
 function App() {
 
 
     return (
-        <div>
+        <div className={'min-h-screen'}>
             <Balance/>
-            <Cooperation/>
+            <Operation/>
         </div>
     )
 }
