@@ -11,7 +11,7 @@ const Operation = () => {
         dispatch(putQuote('Pending...'))
         fetch('https://api.gameofthronesquotes.xyz/v1/random')
             .then(res => res.json())
-            .then(data => dispatch(putQuote(data.sentence)))
+            .then(data => dispatch(putQuote(data.sentence,data.character.name)))
             .catch(() => dispatch(putQuote('Failed to fetch quote data.')));
     }
 

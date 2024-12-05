@@ -17,7 +17,7 @@ export const accountReducer = (state, action) => {
                 balance: state.balance < action.payload ? state.balance : state.balance - action.payload};
 
         case PUT_QUOTE:
-            return {...state, quote: action.payload};
+            return {...state, quote: action.payload.quote , character: action.payload.character};
         default:
             return state;
     }

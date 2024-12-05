@@ -4,6 +4,7 @@ import {legacy_createStore as createStore} from "redux";
 
 const initialState = {
     balance:0,
+    character: "JON SNOW",
     quote:'Winter is coming...'
 }
 
