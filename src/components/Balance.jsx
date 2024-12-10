@@ -3,8 +3,8 @@ import {useSelector} from "react-redux";
 
 const Balance = () => {
 const balance =  useSelector(state => state.balance);
-const quote = useSelector(state => state.quote);
-const character = useSelector(state => state.character);
+const {quote,character} = useSelector(state => state.quote);
+
     return (
         <div className={'text-center text-uppercase'}>
             <h1 className={'text-[gold] font-bold text-8xl'}>Iron Bank Bravos</h1>
